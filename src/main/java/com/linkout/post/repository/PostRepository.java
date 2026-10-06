@@ -1,4 +1,4 @@
-package com.linkout.repository;
+package com.linkout.post.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.linkout.model.Post;
+import com.linkout.post.model.Post;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
 

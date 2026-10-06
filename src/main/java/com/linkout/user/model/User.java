@@ -1,4 +1,4 @@
-package com.linkout.model;
+package com.linkout.user.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

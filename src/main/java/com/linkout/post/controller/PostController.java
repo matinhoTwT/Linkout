@@ -1,4 +1,4 @@
-package com.linkout.controller;
+package com.linkout.post.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.linkout.dto.PostCreateRequest;
-import com.linkout.dto.PostResponse;
-import com.linkout.dto.PostUpdateRequest;
-import com.linkout.service.PostService;
+import com.linkout.post.dtos.PostRequest;
+import com.linkout.post.dtos.PostResponse;
+import com.linkout.post.dtos.PostUpdateRequest;
+import com.linkout.post.service.PostService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -29,7 +29,7 @@ public class PostController {
 	private final PostService postService;
 
 	@PostMapping
-	public ResponseEntity<PostResponse> create(@RequestBody PostCreateRequest request) {
+	public ResponseEntity<PostResponse> create(@RequestBody PostRequest request) {
 		PostResponse response = postService.create(request);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest()
 				.path("/{id}")

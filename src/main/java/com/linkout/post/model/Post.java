@@ -1,6 +1,8 @@
-package com.linkout.model;
+package com.linkout.post.model;
 
 import java.time.LocalDateTime;
+
+import com.linkout.user.model.User;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
