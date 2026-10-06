@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: linkout
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/linkout?createDatabaseIfNotExist=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
